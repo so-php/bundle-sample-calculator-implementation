@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SoPhp\Bundle\Calculator\Implementation;
+namespace SoPhp\Bundle\Sample\Calculator;
 
 
 use SoPhp\Bundle\Sample\Calculator\Activator;

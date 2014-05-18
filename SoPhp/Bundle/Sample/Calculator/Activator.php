@@ -3,8 +3,6 @@
 
 namespace SoPhp\Bundle\Sample\Calculator;
 
-
-use SoPhp\Bundle\Sample\Calculator\CalculatorService;
 use SoPhp\Framework\Activator\ActivatorInterface;
 use SoPhp\Framework\Activator\Context\Context;
 
