@@ -11,7 +11,7 @@ use SoPhp\Framework\Bundle\ActivatorProviderInterface;
 use SoPhp\Framework\Bundle\AutoloaderProviderInterface;
 use SoPhp\Framework\Bundle\BundleInterface;
 
-class Bundle implements BundleInterface, AutoloaderProviderInterface, ActivatorProviderInterface {
+class Bundle implements BundleInterface, ActivatorProviderInterface {
     /** @var  Context */
     protected $context;
 
@@ -30,12 +30,6 @@ class Bundle implements BundleInterface, AutoloaderProviderInterface, ActivatorP
     {
         return $this->context;
     }
-
-    public function getAutoloader()
-    {
-        require_once __DIR__ . '/vendor/autoload.php';
-    }
-
 
     /**
      * Should return a singleton instance of activator
