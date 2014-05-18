@@ -7,6 +7,7 @@ use SoPhp\Framework\Activator\ActivatorInterface;
 use SoPhp\Framework\Activator\Context\Context;
 
 class Activator implements ActivatorInterface {
+    const SERVICE_NAME = 'SoPhp\Bundle\Sample\CalculatorServiceInterface';
     /** @var  CalculatorService */
     protected $calculatorService;
     /**
@@ -16,7 +17,8 @@ class Activator implements ActivatorInterface {
     {
         $registry = $context->getServiceRegistry();
         if($registry){
-            $registry->registerService('SoPhp\Bundle\Sample\CalculatorServiceInterface',
+
+            $registry->registerService(self::SERVICE_NAME,
                 $this->calculatorService = new CalculatorService());
             $context->getLogger()->info("Registered CalculatorService for CalculatorServiceInterface");
         }
@@ -29,7 +31,7 @@ class Activator implements ActivatorInterface {
     {
         $registry = $context->getServiceRegistry();
         if($registry && $this->calculatorService){
-            $registry->unregisterService('SoPhp\Bundle\Sample\CalculatorServiceInterface',
+            $registry->unregisterService(self::SERVICE_NAME,
                 $this->calculatorService);
             $context->getLogger()->info("Unregistered CalculatorService for CalculatorServiceInterface");
         }
