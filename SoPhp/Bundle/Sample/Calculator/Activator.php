@@ -8,7 +8,7 @@ use SoPhp\Framework\Activator\Context\Context;
 use SoPhp\ServiceRegistry\ServiceRegistration;
 
 class Activator implements ActivatorInterface {
-    const SERVICE_NAME = 'SoPhp\Bundle\Sample\CalculatorServiceInterface';
+    const SERVICE_NAME = '\SoPhp\Bundle\Sample\CalculatorServiceInterface';
     /** @var  CalculatorService */
     protected $calculatorService;
     /** @var  ServiceRegistration */

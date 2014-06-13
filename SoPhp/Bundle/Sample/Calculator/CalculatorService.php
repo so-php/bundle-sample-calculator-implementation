@@ -25,4 +25,26 @@ class CalculatorService implements CalculatorServiceInterface{
     {
         return $a - $b;
     }
+
+    /**
+     * @param $a
+     * @param $b
+     * @return number
+     */
+    public function multiply($a, $b)
+    {
+        return $a * $b;
+    }
+
+    /**
+     * @param $a
+     * @param $b
+     * @return number
+     */
+    public function divide($a, $b)
+    {
+        return $a / $b;
+    }
+
+
 }
